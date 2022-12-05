@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useAppSelector } from "../../redux/hooks";
 import classes from "./Notes.module.scss";
 import { Note } from "./Note/Note";
@@ -8,6 +8,10 @@ export const Notes: React.FC = () => {
   const notes = useAppSelector((state) => state.data.notes);
   const state = useAppSelector((state) => state);
   const activeTags = useAppSelector((state) => state.data.activeTags);
+
+  useEffect(() => {
+   localStorage.setItem('notes', JSON.stringify(notes))
+  }, [notes])
 
   return (
     <div className={classes.container}>

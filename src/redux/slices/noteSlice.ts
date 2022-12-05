@@ -11,13 +11,22 @@ type InitialState = {
 };
 
 const initialState: InitialState = {
-  notes: [],
+  notes: getValueFromLocalStorage().notes,
   dataJson: "",
   activeTags: [],
-  allTags: [],
+  allTags: getValueFromLocalStorage().allTags,
   editNote: null,
   editNoteId: null,
 };
+
+function getValueFromLocalStorage() {
+   let notes: NoteType[] = JSON.parse(localStorage.getItem('notes')!) || [];
+   let allTags: string[] = JSON.parse(localStorage.getItem('allTags')!) || []
+   return {
+    notes,
+    allTags
+   }
+}
 
 export function findTags(text: string): string[] {
   return text.split(" ").filter((item) => item.startsWith("#") && item.length > 1);
