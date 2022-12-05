@@ -2,7 +2,7 @@
   "name": "note-editor",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://aimner.github.io/note-editor/",
+  "homepage": "https://note-edit.netlify.app/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
     "@testing-library/jest-dom": "^5.16.5",
