@@ -1,0 +1,8 @@
+@import './scss/commonStyle.scss';
+
+.App {
+    @include flex(column, flex-start, center, nowrap);
+    height: 100%;
+    row-gap: 15px;
+    padding-block: 50px;
+}
