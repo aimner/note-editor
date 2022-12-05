@@ -1,0 +1,30 @@
+@import '../../../scss/commonStyle.scss';
+
+.tag {
+    box-shadow: $box-shadow;
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: $transition;
+    &:hover {
+        background-color: $tag-color-hover;
+        color: white;
+    }
+    font-size: large;
+
+}
+
+.tag_active {
+    background-color: $active-tag-color;
+    color: white;
+    box-shadow: $box-shadow;
+    &:hover {
+        background-color: $active-tag-color;
+        color: white;
+    }
+
+}
+
+.tag_notActive {
+    background-color: $tag-color;
+}

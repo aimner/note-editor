@@ -1,0 +1,22 @@
+@import '../../scss/commonStyle.scss';
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  @include flex(column, center, center, nowrap);
+  row-gap: 10px;
+  padding-bottom: 5px;
+  
+}
+
+.allTags {
+    min-width: 400px;
+    background-color: $tags-block-color;
+    min-height: 58px;
+    border-radius: 10px;
+    padding: 10px;
+    @include flex(row, flex-start, flex-start, wrap);
+    column-gap: 5px;
+    row-gap: 5px;
+    box-shadow: $box-shadow;
+}

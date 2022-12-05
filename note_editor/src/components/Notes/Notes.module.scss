@@ -1,8 +1,0 @@
-@import "../../scss/commonStyle.scss";
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  @include flex(row, center, flex-start, wrap);
-  gap: 15px;
-}
